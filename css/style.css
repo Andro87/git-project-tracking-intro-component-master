@@ -1,0 +1,298 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face{
+    font-family: "barlowcond";
+    src: url("../fonts/BarlowCondensed-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face{
+    font-family: "barlowcond";
+    src: url("../fonts/BarlowCondensed-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: "barlow";
+    src: url("../fonts/Barlow-Regular.ttf");
+    font-weight: 400;
+}
+
+
+
+html{
+    font-size: 18px;
+}
+
+body{
+    font-family: "barlow";
+    font-weight: 400;
+}
+
+h1{
+    font-family: "barlowcond";
+    font-weight:700;
+    color: hsl(230, 29%, 20%);
+    font-size: 3.5rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+p{
+    color:hsl(230, 11%, 40%);
+    font-size: 1rem;
+}
+
+.main--wrap{
+    display: grid;
+    grid-template-columns:45% 55%;
+    height: 100vh;  
+    padding: 40px 0 40px 97px;
+    overflow: hidden;
+}
+
+
+.container--navigation{
+    order: 2;  
+    overflow: hidden;
+}
+
+.container--navigation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width:51%;
+    height: 20rem;  
+    border-bottom-left-radius: 50px;
+    background-color:hsl(207, 33%, 95%);
+    z-index: -5;
+}
+
+.navigation--mobile{
+    display: none;
+}
+
+.navigation--desktop{
+    font-family: "barlowcond";
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation--desktop a {
+    text-decoration: none;
+    color: hsl(230, 29%, 20%);
+    margin-right: 40px;
+}
+
+.navigation--desktop a:hover {
+    text-decoration: underline;
+}
+
+.circle{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: hsl(231, 7%, 65%);
+    margin-right: 40px;
+}
+
+.login{
+    font-family: "barlowcond";
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: transparent;
+    color: hsl(231, 7%, 65%);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.login:hover{
+    text-decoration: underline;
+}
+
+.picture{
+   margin-top: 80px; 
+}
+
+.logo--desktop{
+    margin-bottom: 100px;
+}
+
+.info{
+    padding-right: 60px;   
+}
+.info p {
+    width: 55%;
+}
+
+.new{
+   background-color: hsl(230, 29%, 20%);
+   color:hsl(207, 33%, 95%);
+   padding: 0 8px;
+   border-radius: 20px;
+   margin-right: 10px;
+}
+
+.text--style{
+    color: hsl(231, 7%, 65%);
+}   
+
+.button--wrap{
+    margin-top: 75px;     
+    font-size: 0.8rem;
+    color: hsl(231, 7%, 65%);
+}
+
+.button{
+    background-color: hsl(0, 100%, 68%);
+    color: hsl(207, 33%, 95%);
+    font-family: "barlowcond";
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: hsl(0, 100%, 68%);
+    background-color: hsl(207, 33%, 95%);
+}
+
+@media only screen and (max-width:875px){
+
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .main--wrap{
+        display: block;
+        height: initial;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .container--navigation{
+        padding: 45px 25px;
+        order:1;
+        overflow: hidden;
+    }
+
+    
+    .container--navigation::before {
+        display: none;
+    }
+
+    
+    .container--navigation::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 27rem;   /**/
+        border-bottom-left-radius: 50px;
+        background-color:hsl(207, 33%, 95%);
+        z-index: -5;
+    }
+
+    .navigation--mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 65px;
+    }
+
+    .menu{
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navigation--desktop{
+        display: none;
+    }
+
+    .picture{
+        max-height: 300px;
+        margin-top: 0;
+    }
+
+    .container--info{
+        padding: 20px 25px; 
+    }
+
+    .info{
+        padding: 20px 0;
+    }
+
+    .info p {
+        width: 100%;
+    }
+
+    .logo--desktop{
+        display: none;
+    }
+
+    .button--wrap{
+        margin-top: 25px;
+    }
+
+    .menu--mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        top: 15%;
+        width: 89%;
+
+    }
+
+    .menu--mobile a {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .menu--mobile a:hover {
+        text-decoration: underline;
+    }
+
+    .circle--mobile{
+        border-bottom:hsl(207, 33%, 95%) 1px solid ;
+        margin-bottom:15px;
+        width: 100%;
+    }
+
+    #icon--close{
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width:500px) and (max-width:675px){
+
+    .picture{
+        max-height: 450px;
+    }
+}
+
+@media only screen and (min-width:675px) and (max-width:875px){
+
+    .picture{
+        max-height: 850px;
+    }
+}    
+
